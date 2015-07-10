@@ -1,0 +1,26 @@
+{
+  "name": "jsonexcel",
+  "version": "1.0.0",
+  "description": "produce an excel file out of an array of json objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freezer333/jsonexcel.git"
+  },
+  "keywords": [
+    "excel"
+  ],
+  "author": "Scott Frees <scott.frees@gmail.com> (http://scottfrees.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freezer333/jsonexcel/issues"
+  },
+  "homepage": "https://github.com/freezer333/jsonexcel#readme",
+  "dependencies": {
+    "flatjson": "^1.0.0",
+    "node-xlsx": "^0.5.1"
+  }
+}
