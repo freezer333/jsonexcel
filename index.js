@@ -1,7 +1,7 @@
 flat = require('flatjson');
 xlsx = require('node-xlsx');
 
-module.exports = function (obj, sheetname, delimiter) {
+module.exports = function (obj, sheetname, delimiter, filter) {
     var sheet = sheetname || "Sheet 1";
     
     var input = [];
@@ -15,7 +15,7 @@ module.exports = function (obj, sheetname, delimiter) {
     //build headers
     var headers = []
     for ( var i = 0; i < input.length; i++ ) {
-        var fo = flat(input[i], delimiter);
+        var fo = flat(input[i], delimiter, filter);
         var keys = Object.keys(fo);
         for (var j = 0; j < keys.length; j++ ) {
             if ( headers.indexOf(keys[j] < 0)) {
@@ -28,7 +28,7 @@ module.exports = function (obj, sheetname, delimiter) {
     data.push(headers);
     for ( var i = 0; i < input.length; i++ ) {
         var actual_data = []
-        var fo = flat(input[i], delimiter);
+        var fo = flat(input[i], delimiter, filter);
         for (key in headers) {
             actual_data.push(fo[headers[key]]);
         }
