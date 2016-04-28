@@ -18,7 +18,7 @@ module.exports = function (obj, sheetname, delimiter, filter) {
         var fo = flat(input[i], delimiter, filter);
         var keys = Object.keys(fo);
         for (var j = 0; j < keys.length; j++ ) {
-            if ( headers.indexOf(keys[j] < 0)) {
+            if ( headers.indexOf(keys[j]) < 0) {
                 headers.push(keys[j]);
             }
         }
