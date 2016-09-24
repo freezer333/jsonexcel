@@ -5,7 +5,7 @@ The array of objects do not necessarily need to have the same set of keys - but 
 # Example Usage
 
 ```js
-toxl = require('jsonexel');
+toxl = require('jsonexcel');
 fs = require('fs');
 
 var test = [
@@ -47,7 +47,7 @@ var test = [
     }
 ]
 
-var opts {
+var opts = {
     sheetname : "My Example",
     delimiter : "."
 }
