@@ -39,8 +39,10 @@ var test = [
         }
     }
 ]
-
-buffer = toxl(test, "My Example", ".");
+var headings = {
+    "parent1.child1.child11" : "First grandchild"
+}
+buffer = toxl(test, "My Example", ".", function() {return true;}, headings);
 fs.writeFile("example.xlsx", buffer,  "binary",function(err) {
     if(err) {
         console.log(err);
