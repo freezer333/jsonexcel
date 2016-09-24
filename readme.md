@@ -47,7 +47,12 @@ var test = [
     }
 ]
 
-buffer = toxl(test, "My Example", ".");
+var opts {
+    sheetname : "My Example",
+    delimiter : "."
+}
+
+buffer = toxl(test, opts);
 fs.writeFile("example.xlsx", buffer,  "binary",function(err) {
     if(err) {
         console.log(err);
