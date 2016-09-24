@@ -1,8 +1,14 @@
 flat = require('flatjson');
 xlsx = require('node-xlsx');
 
-module.exports = function (obj, sheetname, delimiter, filter, headings) {
-    var sheet = sheetname || "Sheet 1";
+module.exports = function (obj, opts) {
+
+    var sheet = opts.sheetname || "Sheet 1";
+    var delimiter = opts.delimiter || ".";
+    var filter = opts.filter || function() { return true;}
+    var headings = opts.headings;
+
+
     var header_labels = [];
     var input = [];
     if (obj instanceof Array) {
