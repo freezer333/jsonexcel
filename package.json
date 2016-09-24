@@ -1,6 +1,6 @@
 {
   "name": "jsonexcel",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "produce an excel file out of an array of json objects",
   "main": "index.js",
   "scripts": {

@@ -45,7 +45,8 @@ var options = {
     delimiter : "-", 
     headings : {
         "parent1-child1-child11" : "First grandchild"
-    }
+    }, 
+    pivot : true
 }
 buffer = toxl(test, options);
 fs.writeFile("example.xlsx", buffer,  "binary",function(err) {
