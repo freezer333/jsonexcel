@@ -1,6 +1,6 @@
 {
   "name": "jsonexcel",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "produce an excel file out of an array of json objects",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/freezer333/jsonexcel#readme",
   "dependencies": {
-    "flatjson": "^1.0.0",
+    "flatjson": "^1.0.5",
     "node-xlsx": "^0.5.1"
   }
 }
